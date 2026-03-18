@@ -1,3 +1,9 @@
 spring:
   application:
     name: kaka-admin-skeleton
+
+  profiles:
+    active: dev
+
+server:
+  port: 8080
