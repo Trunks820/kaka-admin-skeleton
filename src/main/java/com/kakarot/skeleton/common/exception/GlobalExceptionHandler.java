@@ -42,4 +42,9 @@ public class GlobalExceptionHandler {
         return ApiResponse.fail(ResultCodeEnum.SYSTEM_ERROR.getCode(), ResultCodeEnum.SYSTEM_ERROR.getMsg());
     }
 
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ApiResponse<Void> handleHttpMessageNotReadableException(Exception e) {
+        return ApiResponse.fail(400, "请求体JSON格式错误");
+    }
+
 }
