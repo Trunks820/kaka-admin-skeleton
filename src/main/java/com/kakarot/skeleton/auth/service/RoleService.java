@@ -2,9 +2,7 @@ package com.kakarot.skeleton.auth.service;
 
 import java.util.Set;
 
-public interface RuleService {
-
+public interface RoleService {
 
     Set<String> findRoleCodesByUserId(Long userId);
-
 }
