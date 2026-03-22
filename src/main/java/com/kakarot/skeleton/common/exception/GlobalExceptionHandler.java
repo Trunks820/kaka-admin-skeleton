@@ -47,4 +47,9 @@ public class GlobalExceptionHandler {
         return ApiResponse.fail(400, "请求体JSON格式错误");
     }
 
+    @ExceptionHandler(ForbiddenException.class)
+    public ApiResponse<Void> handleForbidden(ForbiddenException e){
+        return ApiResponse.fail(403, e.getMessage());
+    }
+
 }
