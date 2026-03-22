@@ -6,8 +6,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.Set;
 
 @Mapper
-public interface RuleMapper {
-
+public interface RoleMapper {
 
     @Select("""
             select r.role_code
