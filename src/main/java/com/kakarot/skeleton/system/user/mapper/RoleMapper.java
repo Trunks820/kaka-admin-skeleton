@@ -1,6 +1,7 @@
 package com.kakarot.skeleton.system.user.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.Set;
@@ -15,7 +16,7 @@ public interface RoleMapper {
             where ur.user_id = #{userId}
             and r.status = 1
             """)
-    Set<String> findRoleCodesByUserId(Long userId);
+    Set<String> findRoleCodesByUserId(@Param("userId")Long userId);
 
 
 

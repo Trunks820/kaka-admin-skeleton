@@ -61,7 +61,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 
         boolean match = Arrays.stream(requirePermission.value()).anyMatch(permissions::contains);
         if(!match){
-            throw new ForbiddenException("无操作权限， 禁止访问");
+            throw new ForbiddenException("无操作权限，禁止访问");
         }
     }
 

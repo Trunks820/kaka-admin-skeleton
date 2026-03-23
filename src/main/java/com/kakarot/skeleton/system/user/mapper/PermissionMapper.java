@@ -1,6 +1,7 @@
 package com.kakarot.skeleton.system.user.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.Set;
@@ -19,7 +20,7 @@ public interface PermissionMapper {
             and p.status = 1
             and r.status = 1
             """)
-    Set<String> findPermCodesByUserId(Long userId);
+    Set<String> findPermCodesByUserId(@Param("userId")Long userId);
 
 
 }
